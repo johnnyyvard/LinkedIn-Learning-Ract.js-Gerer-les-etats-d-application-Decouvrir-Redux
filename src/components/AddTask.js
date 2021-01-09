@@ -1,18 +1,10 @@
-import React from 'react';
-import { connect } from "react-redux";
-import uniqueid from 'uniqueid';
-import { addTask } from "../actions";
+import React from 'react'
 
 class AddTask extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        let item = {
-            id: uniqueid(),
-            name: this.newTask.value,
-            completed: false,
-        }
-        this.props.addTask(item)
+        this.props.onAddTask(this.newTask.value)
         this.props.history.push('/')
     }
 
@@ -34,12 +26,4 @@ class AddTask extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return{
-        addTask: (item) => {
-            dispatch(addTask(item))
-        },
-    }
-}
-
-export default connect(null, mapDispatchToProps)(AddTask);
+export default AddTask
