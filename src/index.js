@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App';
-import './css/ToDo.css';
 import { Provider } from "react-redux";
-import { configureStore } from "./store/store";
+import configureStore from "./store/store";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/ToDo.css';
 
 const store = configureStore();
 
