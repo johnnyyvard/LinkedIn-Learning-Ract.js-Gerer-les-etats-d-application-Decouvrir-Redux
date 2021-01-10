@@ -9,7 +9,7 @@ class ToDoList extends Component {
                 <h1 className="m-3">Liste de tâches</h1>
                 <ul className="list-group m-3">
                     {
-                        this.props.task.map((task) => <ToDo task={task} key={task.id} />)
+                        this.props.tasks.map((task) => <ToDo task={task} key={task.id} />)
                     }
                 </ul>
             </>
